@@ -19,6 +19,8 @@ import PrivateRouteAdmin from "./router/PrivateRouteAdmin";
 import Dashbored from "./pages/Admin/Dashbored";
 import Dashboredsuper from "./pages/Admin/SuperAdmin/Dashboredsuper";
 import PrivateRouteSuperAdmin from "./router/PrivateRouteSuperAdmin";
+import CategoriesList from "./pages/Category/CategoryList";
+import ProductList from "./pages/Products/ProductList";
 
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
         <Route exact path="/" component={LandPage} />
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
+        <Route path="/categorylist" component={CategoriesList} />
+        <Route path="/category/produit/:id" component={ProductList} />
         <PrivateRoute path="/profile" component={Profile} />
         <PrivateRouteAdmin  path="/dashboredAdmin" component={Dashbored} />
         <PrivateRouteSuperAdmin  path="/dashboredSuperAdmin" component={Dashboredsuper} />

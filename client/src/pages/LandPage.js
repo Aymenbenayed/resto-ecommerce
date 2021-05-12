@@ -1,13 +1,12 @@
 import React from "react";
-
+import CategoriesList from './Category/CategoryList'
 const LandPage = () => {
   return (
     <div>
-      <h2>Authentification Project </h2>
-      <h2>using passport-jwt </h2>
-      <h2>Make it MeaningFul ad attractive</h2>
+      <CategoriesList /> 
+
     </div>
   );
 };
-
+ 
 export default LandPage;

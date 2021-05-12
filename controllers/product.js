@@ -1,14 +1,13 @@
 const Product =require('../models/Product')
 const Category = require("../models/Category");
 
-const shortid = require('shortid')
 const slugify = require('slugify')
 
 
 exports.createProduct=(req,res)=>{
     //res.status(200).json({file: req.file , body: req.body})
 
-    const {  name , marque , productImage, description , price , countInStock , category  } = req.body 
+    const {  name , marque , productImage, description , price , countInStock , category ,rating } = req.body 
         const product = new Product({
         name ,
         slug : slugify(name),
@@ -17,9 +16,9 @@ exports.createProduct=(req,res)=>{
         description,
         price,
         /* offre, */
+        rating,
         countInStock,
         category,
-       
         })
         product.save(((error, product)=>{
             if(error) return res.status(400).json({error});

@@ -3,9 +3,6 @@ const mongoose = require("mongoose");
 const ProductSchema = new mongoose.Schema(
   {
     name: { type: String, unique: true, trim: true },
-    marque: { 
-      type: String,
-    },
     productImage: {
       type: String,
     },
@@ -18,11 +15,7 @@ const ProductSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    countInStock: { 
-      type: Number
-     },
     rating: { type: Number, default: 0 },
-
     category: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Category",
